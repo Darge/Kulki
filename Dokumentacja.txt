@@ -1,0 +1,5 @@
+Jak korzystaæ:
+Uruchomiæ program i graæ wed³ug tych zasad: http://www.kurnik.pl/kulki/zasady.phtml
+Kulki mo¿na dowolnie zaznaczaæ i odznaczaæ. W ka¿dej chwili mo¿na rozpocz¹æ grê od nowa klikaj¹c na przycisk "Nowa gra".
+
+Na potrzeby testowania poprawnoœci programu polecam zmianê wartoœci "KulekKoloSiebie" w pliku headers.h na np. 2 - aby tylko 2 kulki by³y potrzebne ko³o siebie do znikniêcia.

@@ -1,0 +1,39 @@
+W "main.c" znajduje siê funkcja main, która tworzy ca³y interfejs graficzny, ³¹czy klikniêcia przycisków z dzia³aniami funkcji oraz uruchamia g³ówn¹ pêtlê gtk.
+W "funkcje.c" znajduj¹ siê implementacje funkcji.
+Plik "headers.h" to po prostu plik nag³ówkowy.
+
+Opis dzia³ania funkcji:
+"koduj_wspolrzedne", "dekoduj_wspolrzedna_X" oraz "dekoduj_wspolrzedna_Y":
+Funkcje te s³u¿¹ u³atwieniu przekazywania dwóch koordynatów jako jednej liczby ca³kowitej jako argument funkcji.
+
+"animacja_przejscia" oraz "animacja_przejscia_2":
+Funkcje te s³u¿¹ wyœwietleniu animacji trasy kulki. Pierwsza z nich odtwarza trasê kulki i wyœwietla j¹ oraz blokuje dzia³anie przycisków, aby nie mo¿na by³o w tym czasie nic zrobiæ. Druga funkcja usuwa œlad trasy kulki oraz przywraca dzia³anie przycisków, po czym wywo³uje funkcjê dodaj¹c¹ kulki po ruchu "dodaj kulki"
+
+"dodaj_kulki":
+Funkcja ta s³u¿y dodaniu kulek na planszê po wykonanym ruchu. Sprawdza, czy ka¿de pole zosta³o zape³nione, co by oznacza³o koniec gry. W takim przypadku uruchamia okno dialogowe nformuj¹ce o wyniku.
+
+"nowa_gra_dialog":
+Ta funkcja usuwa okno dialogowe, które pojawi³o siê po zakoñczeniu gry i wywo³uje funkcjê "nowa_gra"
+
+"jaki_kolor":
+Funkcja ta zwraca grafikê (jako zmienna GtkWidget) z pliku o nazwie podanej jako argument do tej funkcji.
+
+"zmien_kolor":
+Zmienia wygl¹d danego pola na dany kolor oraz zapisuje to do struktury "stan", która trzyma stan gry.
+
+"losuj_nastepne":
+Losuje kulki, które zostan¹ dodane do gry po nastêpnym ruchu oraz wyœwiela je w inferfejsie graficznym.
+
+"nowa_gra":
+Resetuje iloœæ punktów, czyœci planszê, dodaje pocz¹tkowe kulki na start gry, wykonuje funkcje "losuj_nastepne".
+
+"klikniecie_przycisku":
+Funkcja u¿ywana wtedy, gdy kliknie siê na jakiœ przycisk na planszy. Funkcja ta zaznacza i odznacza klikniête kulki (istnieje mo¿liwoœæ zmiana zaznaczenia z jednej kulki na drug¹). Gdy kliknie siê najpierw na kulkê, a póŸniej na puste pole, to funkcja sprawdza BFSem, czy istnieje œcie¿ka pomiêdzy dwoma polami. Jeœli tak, to kulka zostaje przemieszczona na klikniête miejsce. 
+
+"uaktualnij_punkty":
+Uaktualnia label, który przedstawia aktualne zdobyte przez gracza punkty.
+
+"sprawdzenie_kulek":
+Sprawdza, czy na planszy jakieœ kulki s¹ obok siebie lub na ukos w iloœci kwalifikuj¹cej siê do znikniêcia. Jeœli tak, to usuwa je.
+
+Jedyn¹ wykorzystywan¹ struktur¹ jest struktura o nazwie "gra", która trzyma w sobie: wszystkie przyciski; etykiety (label); stan kulek na planszy; kolory kulek, które zostan¹ dodane; iloœæ punktów; aktualnie klikniet¹ kulkê oraz zmienn¹ boolowsk¹ trzymaj¹c¹ informacjê, czy aktualnie jakakolwiek kulka jest klikniêta.

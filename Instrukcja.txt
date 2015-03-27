@@ -1,0 +1,6 @@
+Program nale¿y skompilowaæ buduj¹c w projekt trzy pliki:
+-main.c
+-headers.h
+-funkcje.c
+W folderze z gr¹ powinno siê tak¿e znajdowaæ 16 plików graficznych.
+Jedyna niestandardowa biblioteka, z jakiej korzysta program, to GTK+ 3.0.
